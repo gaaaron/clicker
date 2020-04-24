@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-clockpicker.min.css">
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-clockpicker.min.js"></script>
+
+    <style>
+        .container {
+            width: 300px;
+            padding: 15px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .settings-form {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Clicker v1.0</h3>
+        <form action="/" class="settings-form">
+            <div class="form-group">
+                <label for="selector">Selector of the button you want to click:</label>
+                <input type="text" class="form-control" id="selector" placeholder="Selector" name="selector">
+            </div>
+
+
+            <div class="form-group">
+                <label for="stop_type">Stop condition:</label>
+                <select class="form-control" id="stop_type">
+                    <option value="invisible">'X' is invisible</option>
+                    <option value="visible">'X' is visible</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="x_selector">Selector of 'X' element:</label>
+                <input type="text" class="form-control" id="x_selector" placeholder="Selector" name="x_selector">
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="start_time">Starting time:</label>
+                <div class="input-group clockpicker" id="start_time">
+                    <input type="text" class="form-control" value="" placeholder="now">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div> -->
+
+            <div class="form-group">
+                <label for="click_freq">Clicking frequency (in sec):</label>
+                <input type="number" class="form-control" id="click_freq" placeholder="30" value="30" name="click_freq">
+            </div>
+            <!-- <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div> -->
+
+            <button type="button" id="clickactivity" class="btn btn-primary btn-block">Start</button>
+        </form>
+
+        <div class="alert alert-info">
+            If I want to stop clicking, reload the page!
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
